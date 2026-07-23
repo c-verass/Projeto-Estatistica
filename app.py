@@ -26,13 +26,25 @@ ma_long_window = st.sidebar.number_input(
     step = 1
 )
 
-fig = plot_history(ticker)
-st.plotly_chart(fig)
+tab1, tab2 = st.table([
 
-df = ma_strategy(
-    ticker = ticker,
-    ma_short = ma_short_window,
-    ma_long = ma_long_window
-)
+])
 
-st.dataframe(df)  
+with tab1:
+    st.title('Stocks History')
+    st.write('Look the stock values.')
+
+    fig = plot_history(ticker)
+    st.plotly_chart(fig)
+
+with tab1:
+    st.title('MA Strategy')
+    st.write('Look your portfolio.')
+
+    df = ma_strategy(
+        ticker = ticker,
+        ma_short = ma_short_window,
+        ma_long = ma_long_window
+    )
+
+    st.dataframe(df)  
