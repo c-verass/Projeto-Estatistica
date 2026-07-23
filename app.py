@@ -37,7 +37,7 @@ with tab1:
     fig = plot_history(ticker)
     st.plotly_chart(fig)
 
-with tab1:
+with tab2:
     st.title('MA Strategy')
     st.write('Look your portfolio.')
 
