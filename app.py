@@ -2,9 +2,6 @@ import streamlit as st
 from functions.plot import plot_history
 from functions.backtest import ma_strategy
 
-st.title('Stocks History')
-st.write('Look the stock values.')
-
 ticker = st.sidebar.text_input(
     'Choose the ticker:', 
     value = 'NVDA'    
@@ -26,7 +23,7 @@ ma_long_window = st.sidebar.number_input(
     step = 1
 )
 
-tab1, tab2 = st.table([
+tab1, tab2 = st.tabs([
     'History', 'MA Strategy'
 ])
 
