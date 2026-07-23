@@ -27,7 +27,7 @@ ma_long_window = st.sidebar.number_input(
 )
 
 tab1, tab2 = st.table([
-
+    'History', 'MA Strategy'
 ])
 
 with tab1:
