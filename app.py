@@ -35,4 +35,4 @@ df = ma_strategy(
     ma_long = ma_long_window
 )
 
-st.dataframe(df)
+st.dataframe(df)  
